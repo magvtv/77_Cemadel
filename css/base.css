@@ -1,0 +1,74 @@
+:root {
+  --color-bg-body: #f5f7fa;
+  --color-bg-surface: #ffffff;
+  --color-border-subtle: #dde3ea;
+
+  --color-brand: #00a896;
+  --color-brand-deep: #007f70;
+  --color-brand-soft: #b3e3da;
+
+  --color-text-main: #1f2933;
+  --color-text-soft: #52606d;
+  --color-text-muted: #9fb3c8;
+
+  --space-xs: 4px;
+  --space-s: 8px;
+  --space-m: 16px;
+  --space-l: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  background-color: var(--color-bg-body);
+  color: var(--color-text-main);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0 0 var(--space-m);
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 var(--space-m);
+  color: var(--color-text-soft);
+}
+
+a {
+  color: var(--color-brand-deep);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-main {
+  flex: 1;
+}
+
+
