@@ -19,14 +19,14 @@ This repo contains a static HTML/CSS/JS prototype you can open directly in a bro
 
 ### Tech Stack
 
-- **HTML5** – structure and brochure content in `main.html`.
+- **HTML5** – structure and brochure content in `index.html`.
 - **CSS3 + Bootstrap 5 (CDN)** – layout, typography, and components.
 - **Vanilla JavaScript** – small interaction layer in `script.js`.
 - **Static assets** – SVG images in `img/`.
 
 ### Project Structure
 
-- `main.html` – the main brochure page with:
+- `index.html` – the main brochure page with:
   - Hero section (logo, headings, CTA).
   - Bootstrap accordion with sections: About Us, Our Services, Testimonials / Why Choose Us, Contact Us & Next Steps.
 - `styles.css` – custom styling:
@@ -54,12 +54,12 @@ This repo contains a static HTML/CSS/JS prototype you can open directly in a bro
 #### Run Locally
 
 1. Clone or download this repository.
-2. Open `main.html` directly in your browser:
-   - Double-click `main.html`, or
+2. Open `index.html` directly in your browser:
+   - Double-click `index.html`, or
    - Right-click and choose “Open With” → your browser, or
-   - Serve the folder via a simple static server (e.g., `python -m http.server`) and navigate to `http://localhost:8000/main.html`.
+   - Serve the folder via a simple static server (e.g., `python -m http.server`) and navigate to `http://localhost:8000/index.html`.
 
-The page will load Bootstrap and JavaScript from CDNs referenced in `main.html`.
+The page will load Bootstrap and JavaScript from CDNs referenced in `index.html`.
 
 ### Deployment
 
@@ -70,19 +70,19 @@ Because this is a static site, you can host it on any static hosting provider, s
 
 Deployment steps are generally:
 
-1. Upload all files in this repo (`main.html`, `styles.css`, `script.js`, `img/`).
-2. Configure your host’s document root to serve `main.html` as the entry page.
+1. Upload all files in this repo (`index.html`, `styles.css`, `script.js`, `img/`).
+2. Configure your host’s document root to serve `index.html` as the entry page.
 
 Provider-specific configuration is not included in this repo; follow your host’s documentation.
 
 ### Customization Guide
 
 - **Branding**:
-  - Replace `img/logo.svg` with your production logo (keeping the same filename or updating the `src` attribute in `main.html`).
+  - Replace `img/logo.svg` with your production logo (keeping the same filename or updating the `src` attribute in `index.html`).
   - Adjust colors and gradients in `styles.css` (e.g., `.hero-section`, `.section-header`, `.btn-custom`) to match your brand palette.
 
 - **Copy & content**:
-  - Update the narrative text in the hero, About, Services, Testimonials, and Contact sections inside `main.html`.
+  - Update the narrative text in the hero, About, Services, Testimonials, and Contact sections inside `index.html`.
   - Replace all placeholder bracketed values before production use, including:
     - `[Nurse's Name]`
     - `[X years]` and `[X+]`
