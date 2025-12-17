@@ -47,8 +47,8 @@ Because this is a static site, you can host it on any static hosting provider, s
 
 Deployment steps are generally:
 
-1. Upload all files in this repo (`main.html`, `styles.css`, `script.js`, `img/`).
-2. Configure your host’s document root to serve `main.html` as the entry page.
+1. Upload all files in this repo (`index.html`, `css/`, `js/`, `img/`).
+2. Configure your host’s document root to serve `index.html` as the entry page.
 
 Provider-specific configuration is not included in this repo; follow your host’s documentation.
 
