@@ -1,0 +1,31 @@
+.home-hero-kicker {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-brand-deep);
+  margin-bottom: var(--space-s);
+}
+
+.home-mini-stories {
+  display: flex;
+  gap: var(--space-m);
+  overflow-x: auto;
+  padding-bottom: var(--space-s);
+}
+
+.home-mini-story-card {
+  min-width: 260px;
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
