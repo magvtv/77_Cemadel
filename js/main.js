@@ -1,4 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.querySelector(".site-nav");
+  const navToggle = document.querySelector(".site-nav-toggle");
+
+  if (nav && navToggle) {
+    const toggleNav = () => {
+      const isOpen = nav.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+    };
+
+    navToggle.addEventListener("click", toggleNav);
+
+    nav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (nav.classList.contains("is-open")) {
+          nav.classList.remove("is-open");
+          navToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+    });
+  }
+
   const scrollLinks = document.querySelectorAll("[data-scroll-target]");
 
   scrollLinks.forEach((link) => {

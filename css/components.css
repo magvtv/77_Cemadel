@@ -127,6 +127,10 @@
   color: var(--color-text-soft);
 }
 
+.hero .btn-secondary {
+  background: var(--color-bg-surface);
+}
+
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
