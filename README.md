@@ -1,48 +1,27 @@
-## CEMADEL Brochure Prototype
+## CEMADEL Care – Multi-Page Prototype
 
-A single-page marketing brochure for **CEMADEL** – a patient attendant and home-based care service.  
+A multi-page marketing site for **CEMADEL** – a patient attendant and home-based care service.  
 This repo contains a static HTML/CSS/JS prototype you can open directly in a browser or deploy to any static host.
 
 ### Features
 
-- **Hero cover section**: Logo, tagline, value statement, and a primary call-to-action button.
-- **Accordion content** (Bootstrap): 
-  - About Us – story-driven introduction and positioning.
-  - Our Services – tabular list of services with narrative examples and benefits.
-  - Testimonials / Why Choose Us – social proof and differentiators.
-  - Contact & Next Steps – phone/WhatsApp contacts and placeholders for email, address, and social links.
+- **Home page**:
+  - Hero with clear value proposition and primary CTA (“Request Care Call”).
+  - Bento highlight grid for key service areas.
+  - \"How it works\" 3-step strip.
+  - Mini care stories strip and CTA band.
+- **Services page**:
+  - Service categories in a bento grid.
+  - \"Who we help\" and \"How a plan is shaped\" panels.
+- **About page**:
+  - Origin story, lead nurse card, journey milestones, and values.
+- **Care Stories page**:
+  - Story cards plus reassurance stats.
+- **Contact page**:
+  - Quick contact tiles and a visual prototype of a “Request a care call” form.
 - **Light interactivity** (vanilla JS):
-  - Smooth scrolling to keep accordion sections in view when opened.
-  - Fade/slide-in animations for testimonials when they enter the viewport.
-  - Hover highlight on service table rows.
-  - Primary button that shows a contact prompt.
-
-### Tech Stack
-
-- **HTML5** – structure and brochure content in `main.html`.
-- **CSS3 + Bootstrap 5 (CDN)** – layout, typography, and components.
-- **Vanilla JavaScript** – small interaction layer in `script.js`.
-- **Static assets** – SVG images in `img/`.
-
-### Project Structure
-
-- `main.html` – the main brochure page with:
-  - Hero section (logo, headings, CTA).
-  - Bootstrap accordion with sections: About Us, Our Services, Testimonials / Why Choose Us, Contact Us & Next Steps.
-- `styles.css` – custom styling:
-  - Container styling for the brochure card.
-  - Hero gradient background and typography tweaks.
-  - Table and testimonial card styles.
-  - Service icon sizing and custom button styling.
-- `script.js` – behavior for:
-  - Scrolling opened accordion sections into view.
-  - IntersectionObserver-based testimonial reveal animation.
-  - CTA button alert linking users back to phone contacts.
-  - Hover background color change on service rows.
-- `img/` – SVG assets:
-  - `logo.svg` – CEMADEL logo.
-  - `care-icon.svg` – icon used in the services table.
-  - `testimonial-placeholder.svg` – avatar-style placeholders for testimonials.
+  - Smooth scrolling for CTA buttons.
+  - IntersectionObserver-based reveal animations for tiles and cards respecting `prefers-reduced-motion`.
 
 ### Getting Started
 
@@ -54,12 +33,10 @@ This repo contains a static HTML/CSS/JS prototype you can open directly in a bro
 #### Run Locally
 
 1. Clone or download this repository.
-2. Open `main.html` directly in your browser:
-   - Double-click `main.html`, or
+2. Open `index.html` directly in your browser:
+   - Double-click `index.html`, or
    - Right-click and choose “Open With” → your browser, or
-   - Serve the folder via a simple static server (e.g., `python -m http.server`) and navigate to `http://localhost:8000/main.html`.
-
-The page will load Bootstrap and JavaScript from CDNs referenced in `main.html`.
+   - Serve the folder via a simple static server (e.g., `python -m http.server`) and navigate to `http://localhost:8000/index.html`.
 
 ### Deployment
 
@@ -75,31 +52,39 @@ Deployment steps are generally:
 
 Provider-specific configuration is not included in this repo; follow your host’s documentation.
 
+### Project Structure
+
+- `index.html` – Home page (hero, bento highlights, how it works, mini stories, CTA band).
+- `services.html` – Service categories and who/what panels.
+- `about.html` – Story, journey, values, and team overview.
+- `care-stories.html` – Care story cards and stats.
+- `contact.html` – Contact options and request form prototype.
+- `css/`
+  - `base.css` – tokens, typography and body/base styles.
+  - `layout.css` – header, footer, containers, grid helpers.
+  - `components.css` – cards, buttons, badges, hero, bento, CTA band.
+  - `pages-home.css` – home-specific tweaks and reveal helpers.
+- `js/`
+  - `main.js` – smooth scroll and reveal-on-scroll logic.
+- `img/` – SVG assets:
+  - `logo.svg` – CEMADEL logo.
+  - `care-icon.svg` – service icon used in the original brochure.
+  - `testimonial-placeholder.svg` – avatar-style placeholders for testimonials.
+
 ### Customization Guide
 
 - **Branding**:
-  - Replace `img/logo.svg` with your production logo (keeping the same filename or updating the `src` attribute in `main.html`).
-  - Adjust colors and gradients in `styles.css` (e.g., `.hero-section`, `.section-header`, `.btn-custom`) to match your brand palette.
+  - Replace `img/logo.svg` with your production logo (keeping the same filename or updating the `src` attributes).
+  - Adjust tokens and gradients in `css/base.css`, `css/components.css` to match your palette.
 
 - **Copy & content**:
-  - Update the narrative text in the hero, About, Services, Testimonials, and Contact sections inside `main.html`.
-  - Replace all placeholder bracketed values before production use, including:
-    - `[Nurse's Name]`
-    - `[X years]` and `[X+]`
-    - `[Location/Year]`
-    - `[info@cemadelcare.com]`
-    - `[Your Location, e.g., Nairobi, Kenya]`
-    - Social handles like `[Facebook/Instagram]`.
-
-- **Services & testimonials**:
-  - Modify the services table rows in the “Our Services” accordion item to match the actual offering.
-  - Replace testimonial placeholder text with real quotes and, if desired, real photos (update `testimonial-placeholder.svg` with real assets or new filenames).
+  - Update hero copy, services descriptions, stories, and About content across the HTML pages.
+  - Replace all placeholder bracketed values before production use:
+    - `[Lead nurse name]`, `[Year]`, `[X+]`, `[info@cemadelcare.com]`, `[Your Location, e.g., Nairobi, Kenya]`, etc.
+  - Swap placeholder story text with real anonymized care stories.
 
 - **Interactivity**:
-  - Adjust or replace the alert in `script.js` used for the primary CTA button with:
-    - A contact form modal, or
-    - A WhatsApp deep link (`https://wa.me/` style URL), or
-    - A dedicated contact/booking page.
+  - Connect the Contact form in `contact.html` to your backend or a form service before using it in production.
 
 ### Accessibility & Responsiveness
 
