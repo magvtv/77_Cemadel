@@ -1,0 +1,7 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="45" fill="#00A896" stroke="#fff" stroke-width="5"/>
+  <text x="50" y="35" text-anchor="middle" fill="#fff" font-family="Arial" font-size="12" font-weight="bold">CEMADEL</text>
+  <text x="50" y="50" text-anchor="middle" fill="#fff" font-family="Arial" font-size="8">Care</text>
+  <text x="50" y="62" text-anchor="middle" fill="#fff" font-family="Arial" font-size="8">Services</text>
+  <path d="M30 75 Q50 85 70 75 L70 80 Q50 90 30 80 Z" fill="#fff"/>
+</svg>
